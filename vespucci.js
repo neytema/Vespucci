@@ -11,5 +11,11 @@ create.mappings = mappings;
 module.exports = create;
 
 function create(content, map) {
-    return new Vespucci(content, map);
+    var instance = new Vespucci(content, map);
+
+    if (instance.mappings) {
+        instance.addPoints(mappings.parse(instance.mappings));
+    }
+
+    return instance;
 }
