@@ -1,0 +1,23 @@
+{
+  "name": "vespucci",
+  "version": "0.0.0",
+  "description": "Code and SourceMap in sync",
+  "main": "vespucci.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neytema/Vespucci.git"
+  },
+  "keywords": [
+    "source-map",
+    "sourcemap"
+  ],
+  "author": "neytema@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neytema/Vespucci/issues"
+  },
+  "homepage": "https://github.com/neytema/Vespucci#readme"
+}
