@@ -3,15 +3,15 @@
 var key;
 
 var Vespucci = require('./lib/proto');
-var statics = require('./lib/statics');
+var main = require('./lib/main');
 var mappings = require('./lib/mappings');
 
 exports.create = create;
 exports.Vespucci = Vespucci;
 exports.mappings = mappings;
 
-for (key in statics) {
-    exports[key] = statics[key];
+for (key in main) {
+    exports[key] = main[key];
 }
 
 function create(content, map) {
