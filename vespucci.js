@@ -1,3 +1,5 @@
+// TODO: expose statics as main module methods
+
 'use strict';
 
 var Vespucci = require('./lib/proto');
