@@ -1,16 +1,18 @@
-// TODO: expose statics as main module methods
-
 'use strict';
+
+var key;
 
 var Vespucci = require('./lib/proto');
 var statics = require('./lib/statics');
 var mappings = require('./lib/mappings');
 
-create.Vespucci = Vespucci;
-create.statics = statics;
-create.mappings = mappings;
+exports.create = create;
+exports.Vespucci = Vespucci;
+exports.mappings = mappings;
 
-module.exports = create;
+for (key in statics) {
+    exports[key] = statics[key];
+}
 
 function create(content, map) {
     var instance = new Vespucci(content, map);
