@@ -1,6 +1,5 @@
 'use strict';
 
-var instance;
 var assert = require('assert');
 var main = require('../lib/main');
 
@@ -112,6 +111,9 @@ console.log('  main.addSource', 'should return correct index');
 });
 
 console.log('  main.addSource', 'should set sourcesContent on correct index');
+console.log('    not implemented');
+
+console.log('  main.addSource', 'should set sourcesContent to null');
 console.log('    not implemented');
 
 // TODO: implement tests
