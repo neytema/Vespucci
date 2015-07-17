@@ -2,7 +2,7 @@
   "name": "vespucci",
   "version": "0.0.0",
   "description": "Code and SourceMap in sync",
-  "main": "vespucci.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
