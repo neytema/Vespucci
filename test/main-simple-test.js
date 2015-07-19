@@ -110,11 +110,21 @@ console.log('  main.addSource', 'should return correct index');
     }
 });
 
-console.log('  main.addSource', 'should set sourcesContent on correct index');
-console.log('    not implemented');
+console.log('  main.addSource', 'should set source content on correct index');
 
-console.log('  main.addSource', 'should set sourcesContent to null');
-console.log('    not implemented');
+'abc'.split('').concat([ 0, 2 ]).forEach(function (source) {
+    var instance = { sources: 'befg'.split(''), sourcesContent: [] };
+    var result = main.addSource(instance, source, 'source content');
+    assert.equal(instance.sourcesContent[result], 'source content');
+});
+
+console.log('  main.addSource', 'should accept null as source content');
+
+'abc'.split('').concat([ 0, 2 ]).forEach(function (source) {
+    var instance = { sources: 'befg'.split(''), sourcesContent: 'befg'.split('') };
+    var result = main.addSource(instance, source, null);
+    assert.strictEqual(instance.sourcesContent[result], null);
+});
 
 // TODO: implement tests
 // function addName(instance, name) {}
