@@ -126,7 +126,31 @@ console.log('  main.addSource', 'should accept null as source content');
     assert.strictEqual(instance.sourcesContent[result], null);
 });
 
+console.log('  main.addName', 'should add new name to names');
+
+'abcd'.split('').forEach(function (name) {
+    var instance = { names: 'efg'.split('') };
+    main.addName(instance, name);
+    assert.equal(instance.names.length, 4);
+    assert.equal(instance.names[3], name);
+});
+
+console.log('  main.addName', "shouldn't add existing name to names");
+
+'abcd'.split('').forEach(function (name) {
+    var instance = { names: 'abcd'.split('') };
+    main.addName(instance, name);
+    assert.equal(instance.names.join(''), 'abcd');
+});
+
+console.log('  main.addName', 'should return correct index');
+
+'abcdefg'.split('').forEach(function (name) {
+    var instance = { names: 'efg'.split('') };
+    var result = main.addName(instance, name);
+    assert.equal(result, instance.names.indexOf(name));
+});
+
 // TODO: implement tests
-// function addName(instance, name) {}
 // function clearPoints(instance, from, to) {}
 // function clone(instance) {}
